@@ -1,0 +1,113 @@
+%% Define W&M standard colors
+%% Retrieved 2015/02/22
+%% http://styleguide.wm.edu/university-colors
+\definecolor{WMGreen}       {RGB}{ 17,  87,  64}
+\definecolor{WMGold}        {RGB}{185, 151,  91}
+\definecolor{WMSpiritGold}  {RGB}{240, 179,  35}
+\definecolor{WMSilver}      {RGB}{208, 211, 212}
+\definecolor{WMWhite}       {RGB}{255, 255, 255}
+\definecolor{WMBlack}       {RGB}{  0,   0,   0}
+
+
+\definecolorpalette{WM}{
+  \definecolor{colorOne}{named}{WMGreen} % Main
+  \definecolor{colorTwo}{named}{WMGold} % Secondary
+  \definecolor{colorThree}{named}{WMSpiritGold} % Third
+  \definecolor{colorFour}{named}{WMBlack} % Black
+  \definecolor{colorFive}{named}{WMSilver} % Light
+  \definecolor{colorSix}{named}{WMWhite} % White
+}
+
+%% Define the theme color style (uses the colors above)
+\definecolorstyle{WM}{% Default palette
+  \definecolor{colorOne}{named}{WMGreen} % Main
+  \definecolor{colorTwo}{named}{WMGold} % Secondary
+  \definecolor{colorThree}{named}{WMSpiritGold} % Third
+  \definecolor{colorFour}{named}{WMBlack} % Black
+  \definecolor{colorFive}{named}{WMSilver} % Light
+  \definecolor{colorSix}{named}{WMWhite} % White
+}{ % Now define the style
+  % Background Colors
+  \colorlet{backgroundcolor}{colorSix}
+  \colorlet{framecolor}{black}
+  % Title Colors
+  \colorlet{titlefgcolor}{colorOne}
+  \colorlet{titlebgcolor}{colorSix}
+  % Block Colors
+  \colorlet{blocktitlebgcolor}{colorOne}
+  \colorlet{blocktitlefgcolor}{colorSix}
+  \colorlet{blockbodybgcolor}{colorSix}
+  \colorlet{blockbodyfgcolor}{colorOne}
+  % Innerblock Colors
+  \colorlet{innerblocktitlebgcolor}{white}
+  \colorlet{innerblocktitlefgcolor}{black}
+  \colorlet{innerblockbodybgcolor}{colorThree!30!white}
+  \colorlet{innerblockbodyfgcolor}{black}
+  % Note colors
+  \colorlet{notefgcolor}{black}
+  \colorlet{notebgcolor}{colorTwo!50!white}
+  \colorlet{noteframecolor}{colorTwo}
+}
+
+%% Define the theme color style (uses the colors above)
+\definecolorstyle{WMGreen}{% Default palette
+  \definecolor{colorOne}{named}{WMGreen} % Main
+  \definecolor{colorTwo}{named}{WMGold} % Secondary
+  \definecolor{colorThree}{named}{WMSpiritGold} % Third
+  \definecolor{colorFour}{named}{WMBlack} % Black
+  \definecolor{colorFive}{named}{WMSilver} % Light
+  \definecolor{colorSix}{named}{WMWhite} % White
+}{ % Now define the style
+  % Background Colors
+  \colorlet{backgroundcolor}{colorOne}
+  \colorlet{framecolor}{black}
+  % Title Colors
+  \colorlet{titlefgcolor}{colorSix}
+  \colorlet{titlebgcolor}{colorOne}
+  % Block Colors
+  \colorlet{blocktitlebgcolor}{colorThree}
+  \colorlet{blocktitlefgcolor}{colorOne}
+  \colorlet{blockbodybgcolor}{colorSix}
+  \colorlet{blockbodyfgcolor}{colorOne}
+  % Innerblock Colors
+  \colorlet{innerblocktitlebgcolor}{white}
+  \colorlet{innerblocktitlefgcolor}{black}
+  \colorlet{innerblockbodybgcolor}{colorThree!30!white}
+  \colorlet{innerblockbodyfgcolor}{black}
+  % Note colors
+  \colorlet{notefgcolor}{black}
+  \colorlet{notebgcolor}{colorTwo!50!white}
+  \colorlet{noteframecolor}{colorTwo}
+}
+
+%% Define W&M Theme for TikzPoster
+\definelayouttheme{WM}{%
+  \usecolorstyle[colorPalette=WM]{WM}%
+  \usebackgroundstyle{WM}%
+  \usetitlestyle{WM}%
+  \useblockstyle{WM}%
+  \useinnerblockstyle{WM}%
+}%
+
+%% Define W&M Theme for TikzPoster
+\definelayouttheme{WMCypher}{%
+  \usetheme{WM}
+  \usebackgroundstyle{WMCypher}
+}%
+
+%% Define W&M Theme for TikzPoster
+\definelayouttheme{WMCypherV2}{%
+  \usetheme{WM}
+  \usecolorstyle[colorPalette=WM]{WMGreen}
+  \useblockstyle{WMV2}%
+  \usebackgroundstyle{WMCypherWhite}
+}%
+
+%% Define W&M Theme for TikzPoster
+\definelayouttheme{WMKurtis}{%
+  \usecolorstyle[colorPalette=WM]{WM}%
+  \usebackgroundstyle{WMKurtis}%
+  \usetitlestyle{WM}%
+  \useblockstyle{WMKurtis}%
+  \useinnerblockstyle{WM}%
+}%

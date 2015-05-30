@@ -1,0 +1,30 @@
+%% Default variant
+\definebackgroundstyle{WM}{%
+  \fill[inner sep=0pt, line width=0pt, color=backgroundcolor] (bottomleft) rectangle (topright);
+    \node[opacity=1.0] at (0\textwidth, -0.25\textheight) { \includegraphics[width=\textwidth]{wm_figures/wm_crim_dell_silver.png}};
+}
+
+%% Cypher variant (inverted_
+\definebackgroundstyle{WMCypher}{%
+  \fill[inner sep=0pt, line width=0pt, color=backgroundcolor] (bottomleft) rectangle (topright);
+    \node[opacity=1.0] at (+0.5\textwidth,0\textheight) { \includegraphics[height=\textheight]{wm_figures/wm_cypher_silver.png}};
+}
+
+%% Default variant
+\definebackgroundstyle{WMWhite}{%
+  \fill[inner sep=0pt, line width=0pt, color=backgroundcolor] (bottomleft) rectangle (topright);
+    \node[opacity=1.0] at (0\textwidth, -0.25\textheight) { \includegraphics[width=\textwidth]{wm_figures/wm_crim_dell_white.png}};
+}
+
+%% Cypher variant
+\definebackgroundstyle{WMCypherWhite}{%
+  \fill[inner sep=0pt, line width=0pt, color=backgroundcolor] (bottomleft) rectangle (topright);
+    \node[opacity=0.85] at (+0.5\textwidth,0\textheight) { \includegraphics[height=\textheight]{wm_figures/wm_cypher_white.png}};
+}
+
+%% The Kurtis variant of the color scheme
+\definebackgroundstyle{WMKurtis}{%
+  %% Blend white and silver colors
+  \fill[inner sep=0pt, line width=0pt, top color=backgroundcolor, middle color=backgroundcolor, bottom color=WMSilver] (bottomleft) rectangle (+0.5\textwidth,+0.4\textheight);
+    \node[opacity=0.85] at (0\textwidth, -0.10\textheight) { \includegraphics[height=0.75\textheight]{wm_figures/wm_cypher_gold.png}};
+}

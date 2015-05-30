@@ -1,0 +1,49 @@
+\defineblockstyle{WM}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0pt, roundedcorners=30, linewidth=0.4cm,
+    titleinnersep=1cm, bodyinnersep=1cm 
+}{
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
+        \ifBlockHasTitle %
+            \draw[color=blocktitlebgcolor, fill=blockbodybgcolor, fill opacity=0.5] (blockbody.south west) rectangle (blockbody.north east);
+           \draw[color=blocktitlebgcolor, fill=blocktitlebgcolor,fill opacity=1, even odd rule] (blockbody.south west) rectangle (blocktitle.north east) (blockbody.south west) rectangle (blockbody.north east);
+        \else
+           \draw[color=blocktitlebgcolor, fill=blockbodybgcolor,fill opacity=0.9] (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
+
+%% Variant #2
+\defineblockstyle{WMV2}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0pt, roundedcorners=30, linewidth=0.4cm,
+    titleinnersep=1cm, bodyinnersep=1cm 
+}{
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
+        \ifBlockHasTitle %
+            \draw[color=blocktitlebgcolor, fill=blockbodybgcolor, fill opacity=0.95] (blockbody.south west) rectangle (blockbody.north east);
+           \draw[color=blocktitlebgcolor, fill=blocktitlebgcolor,fill opacity=1, even odd rule] (blockbody.south west) rectangle (blocktitle.north east) (blockbody.south west) rectangle (blockbody.north east);
+        \else
+           \draw[color=blocktitlebgcolor, fill=blockbodybgcolor,fill opacity=0.9] (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
+
+%% W&M Kurtis Variant
+\defineblockstyle{WMKurtis}{
+    titlewidthscale=1, bodywidthscale=1, titlecenter,
+    titleoffsetx=0pt, titleoffsety=0pt, bodyoffsetx=0pt, bodyoffsety=0pt,
+    bodyverticalshift=0pt, roundedcorners=30, linewidth=0.4cm,
+    titleinnersep=1cm, bodyinnersep=1cm 
+}{
+    \begin{scope}[line width=\blocklinewidth, rounded corners=\blockroundedcorners]
+        \ifBlockHasTitle %
+            \draw[color=blocktitlebgcolor, fill=blockbodybgcolor, fill opacity=0.85] (blockbody.south west) rectangle (blockbody.north east);
+           \draw[color=blocktitlebgcolor, fill=blocktitlebgcolor,fill opacity=1, even odd rule] (blockbody.south west) rectangle (blocktitle.north east) (blockbody.south west) rectangle (blockbody.north east);
+        \else
+           \draw[color=blocktitlebgcolor, fill=blockbodybgcolor,fill opacity=0.9] (blockbody.south west) rectangle (blockbody.north east);
+        \fi
+    \end{scope}
+}
